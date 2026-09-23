@@ -8,9 +8,12 @@ void question3();
 void question4();
 void question5();
 void question6();
+void question7();
+
 int main()
 {
-	question6();
+	srand(time(NULL));
+	question7();
 }
 
 bool isPalindrome(string &s, int n = 0)
@@ -131,4 +134,37 @@ void Hanoi(int n, int start, int destination, int open)
 void question6()
 {
 	Hanoi(3, 1, 3, 2);
+}
+
+void printForward(int* arr, int size, int n = 0)
+{
+	if (n == size)
+	{
+		cout << endl;
+		return;
+	}
+	cout << arr[n] << ", ";
+	printForward(arr, size, n+1);
+}
+void printReverse(int* arr, int size, int n = 0)
+{
+	if (n == size)
+		return;
+	
+	printReverse(arr, size, n + 1);
+	cout << arr[n] << ", ";
+	if (n == 0)
+		cout << endl;
+}
+void question7()
+{
+	const int size = 10;
+	int arr[size];
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = 1 + rand() % 20;
+	}
+	print(arr, size);
+	printForward(arr, size);
+	printReverse(arr, size);
 }

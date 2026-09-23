@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Recursion_SD3a26/Recursion_SD3a26.vcxproj" />
+  <Project Path="Recursion_SD3a26/Recursion_SD3a26.vcxproj" Id="4967d01e-097f-4bfa-ab4c-3fc7a25d3575" />
 </Solution>
